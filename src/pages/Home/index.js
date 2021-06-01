@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Wrapper, Table, Titulo } from './styles';
+import { Container, Table, Titulo, ConteudoTitulo, BotaoAcao, ButtonInfo } from './styles';
 
 export const Home = () => {
 
@@ -19,10 +20,20 @@ export const Home = () => {
     }, [])
 
     return (
-        <Wrapper>
-            <Titulo>
-                Listar
-            </Titulo>
+        <Container>
+            <ConteudoTitulo>
+                <Titulo>
+                    Listar
+                </Titulo>
+                <BotaoAcao>
+                    <Link to="/cadastrar">
+                        <ButtonInfo>
+                            Cadastrar
+                            </ButtonInfo>
+                    </Link>
+                </BotaoAcao>
+            </ConteudoTitulo>
+
             <Table>
                 <thead>
                     <tr>
@@ -43,6 +54,6 @@ export const Home = () => {
                     ))}
                 </tbody>
             </Table>
-        </Wrapper>
+        </Container>
     );
 }
