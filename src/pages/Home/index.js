@@ -51,6 +51,8 @@ export const Home = () => {
                             <td>{produto.descricao}</td>
                             <td>
                                 <Link to={"/visualizar/" + produto.id}><ButtonPrimary>View</ButtonPrimary></Link>
+                                {" "}
+                                <Link to={"/editar/" + produto.id}><ButtonPrimary>Editar</ButtonPrimary></Link>
                             </td>
                         </tr>
                     ))}
