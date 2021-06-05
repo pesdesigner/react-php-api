@@ -50,3 +50,17 @@ export const ButtonInfo = styled.button`
     }
 `;
 
+export const ButtonPrimary = styled.button`
+    background-color: #fff;
+    color: #0d6efd;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+    :hover{
+        background-color: #31d2f2;
+        color: #fff;
+    }
+`;
+

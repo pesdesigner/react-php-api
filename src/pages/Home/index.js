@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, Table, Titulo, ConteudoTitulo, BotaoAcao, ButtonInfo } from './styles';
+import { Container, Table, Titulo, ConteudoTitulo, BotaoAcao, ButtonInfo, ButtonPrimary } from './styles';
 
 export const Home = () => {
 
@@ -49,7 +49,9 @@ export const Home = () => {
                             <td>{produto.id}</td>
                             <td>{produto.titulo}</td>
                             <td>{produto.descricao}</td>
-                            <td>Visualizar Editar Apagar</td>
+                            <td>
+                                <Link to={"/visualizar/" + produto.id}><ButtonPrimary>View</ButtonPrimary></Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
